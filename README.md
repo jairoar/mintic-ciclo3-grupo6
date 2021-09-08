@@ -1,3 +1,3 @@
 # mintic-ciclo3-grupo6
-UPB Medellín
+UPB Medellín -
 Fines académicos.

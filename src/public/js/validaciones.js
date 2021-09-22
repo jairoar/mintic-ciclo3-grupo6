@@ -11,7 +11,8 @@ function validar_nombre_usuario(usuario) {
 }
 
 function validar_anoNacimiento_usuario(numero) {
-  if (numero.value >= 1900 && numero.value < 2022) {
+  numero_convertido = parseInt(numero.value);
+  if (numero_convertido >= 1900 && numero_convertido < 2022) {
     return true;
   } else {
     return false;

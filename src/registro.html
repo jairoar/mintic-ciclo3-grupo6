@@ -5,18 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pets</title>
-
+    <script src="public/js/validaciones.js"> </script>
     <link rel="stylesheet" href="public/css/estilos.css">
 
 </head>
 <body>
-<form id="registrar_usuario_form" action="#" method="POST">
+<form name="registrar_usuario_form" id="registrar_usuario_form" action="#">
 <fieldset>
 <legend> Registrar Usuarios Veterinaria </legend>
-<p> Nombre de usuario: <input type="text" id="nombre_usuario" size="50" required></input></p>
+<p> Nombre de usuario: <input type="text" name="nombre_usuario" id="nombre_usuario" size="50" required></input></p>
 <p>Año de nacimiento: <input type="number" id="anoNacimiento_usuario" min="1900" max="2021" required></p>
 <p>Contraseña: <input type="password" id="contrasena_usuario" required></input></p>
-<button id="enviar_registro">Guardar</button>
+<button type="submit" id="enviar_registro" onclick="validar_nombre_usuario(document.registrar_usuario_form.nombre_usuario)">Guardar</button>
 
 </fieldset>
 

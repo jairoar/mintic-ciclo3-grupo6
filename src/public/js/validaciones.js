@@ -1,9 +1,6 @@
 function validar_nombre_usuario(usuario) {
   let letters = /^[A-Za-z]+$/;
-  if (
-    usuario.value.match(letters) &&
-    usuario.value[0] === usuario.value[0].toUpperCase()
-  ) {
+  if (usuario.match(letters) && usuario[0] === usuario[0].toUpperCase()) {
     return true;
   } else {
     return false;
@@ -25,14 +22,14 @@ function validar_contrasena(password) {
   let contMinus = 0;
   let contNum = 0;
   let flag_mayus_minus_num = false;
-  for (let i = 0; i < password.value.length; i++) {
-    if (password.value[i] === password.value[i].toUpperCase()) {
+  for (let i = 0; i < password.length; i++) {
+    if (password[i] === password[i].toUpperCase()) {
       contMayus += 1;
     }
-    if (password.value[i] === password.value[i].toLowerCase()) {
+    if (password[i] === password[i].toLowerCase()) {
       contMinus += 1;
     }
-    if (isNumeric(password.value[i])) {
+    if (Number.isInteger(parseInt(password[i]))) {
       contNum += 1;
     }
   }
@@ -42,11 +39,7 @@ function validar_contrasena(password) {
   }
 
   let letters = /^[a-zA-Z0-9_]*$/;
-  if (
-    password.value.length >= 6 &&
-    password.value.match(letters) &&
-    flag_mayus_minus_num
-  ) {
+  if (password.length >= 6 && password.match(letters) && flag_mayus_minus_num) {
     return true;
   } else {
     return false;
